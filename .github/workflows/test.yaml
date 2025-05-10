@@ -1,6 +1,10 @@
 ---
 name: validate pr review
-on: pull_request_review
+on:
+  pull_request_review:
+    types:
+      - submitted
+      - dismissed
 jobs:
   test:
     runs-on: ubuntu-24.04
