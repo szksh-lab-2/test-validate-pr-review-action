@@ -10,3 +10,5 @@ jobs:
       contents: read
     steps:
       - uses: suzuki-shunsuke/validate-pr-review-action@latest
+        with:
+          pull_request_number: ${{ github.event.pull_request.number }}
