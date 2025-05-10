@@ -13,6 +13,6 @@ jobs:
       pull-requests: write
       contents: read
     steps:
-      - uses: suzuki-shunsuke/validate-pr-review-action@latest
+      - uses: suzuki-shunsuke/validate-pr-review-action@pr/15
         with:
           pull_request_number: ${{ github.event.pull_request.number }}
