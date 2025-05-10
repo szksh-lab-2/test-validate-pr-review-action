@@ -1,8 +1,12 @@
 ---
 name: validate pr review
-on: pull_request_review
+on:
+  pull_request_review:
+    types:
+      - submitted
+      - dismissed
 jobs:
-  test:
+  validate-pr-review:
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     permissions:
@@ -10,3 +14,5 @@ jobs:
       contents: read
     steps:
       - uses: suzuki-shunsuke/validate-pr-review-action@latest
+        with:
+          pull_request_number: ${{ github.event.pull_request.number }}
