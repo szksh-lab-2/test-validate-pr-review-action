@@ -13,6 +13,9 @@ jobs:
       pull-requests: write
       contents: read
     steps:
+      - run: "true"
+        env:
+          EVENT: ${{ toJson(github.event) }}
       - uses: suzuki-shunsuke/validate-pr-review-action@latest
         with:
           pull_request_number: ${{ github.event.pull_request.number }}
