@@ -14,3 +14,7 @@ jobs:
       contents: read
     steps:
       - uses: suzuki-shunsuke/validate-pr-review-action@pr/21
+        with:
+          untrusted_machine_users: |
+            suzuki-shunsuke-bot-2
+            /-bot$/
