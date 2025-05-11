@@ -13,9 +13,14 @@ jobs:
       pull-requests: write
       contents: read
     steps:
-      - uses: suzuki-shunsuke/validate-pr-review-action@pr/22
+      - uses: suzuki-shunsuke/validate-pr-review-action@pr/23
         with:
+          trusted_apps: |
+            # test
+            renovate
           trusted_machine_users: |
+            # test
             suzuki-shunsuke
           untrusted_machine_users: |
+            # test
             /-shunsuke$/
