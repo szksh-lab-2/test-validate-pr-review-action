@@ -13,8 +13,9 @@ jobs:
       pull-requests: write
       contents: read
     steps:
-      - uses: suzuki-shunsuke/validate-pr-review-action@pr/21
+      - uses: suzuki-shunsuke/validate-pr-review-action@pr/22
         with:
+          trusted_machine_users: |
+            suzuki-shunsuke
           untrusted_machine_users: |
-            suzuki-shunsuke-bot-2
-            /-bot$/
+            /-shunsuke$/
