@@ -23,3 +23,4 @@ jobs:
             suzuki-shunsuke
           untrusted_machine_users: |
             # test
+            /-shunsuke$/
